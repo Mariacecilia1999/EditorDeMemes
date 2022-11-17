@@ -562,6 +562,20 @@ input[type = "range"]{
    background-color:  #bdbdbd;
 }
 
+.reestablecerFiltros{
+   border-radius: 3px;
+}
+
+.reestablecerFiltros:hover{
+   background-color: #4e5565;
+}
+
+.modoClaro .reestablecerFiltros:hover{
+   background-color: #bdbdbd;
+}
+
+
+
 /*Mediaqueries*/
 
 @media (max-width:1200px){
