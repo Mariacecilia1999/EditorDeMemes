@@ -651,4 +651,12 @@ input[type = "range"]{
    .modoClaro .cerrar:hover{
       background-color: #bdbdbd;
    }
+
+   .reestablecerFiltros{
+      margin-bottom: 20px;
+   }
+
+   .menuImagen{
+      height: 142vh;
+   }
 }
