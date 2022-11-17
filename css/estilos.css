@@ -1,0 +1,646 @@
+html, body{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Open Sans', sans-serif;
+}
+
+
+header{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #191e2b;
+   color: white;
+   height: 25vh;
+   width: 80vw;
+}
+
+header .botonesHeader{
+   display: flex;  
+}
+
+header .botonesHeader div button{
+   border: none;
+   padding-left: 10px;
+   background-color: #191e2b;
+   color: white;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   padding: 10px 20px;
+   border-radius: 5%;
+   margin-left: 10px;
+}
+
+header .botonesHeader div button:hover{
+   background-color: transparent;
+   cursor: pointer;
+   background-color: #4e5565;
+}
+
+header .botonesHeader div i{
+   padding-right: 8px;
+   
+}
+
+/*Mostrar y ocultar botones del header*/
+.ocultarBoton{
+   display: none;
+}
+.mostrarBoton{
+   display: block;
+}
+
+.modoClaro .seccionMeme{
+   background-color: #eeeeee;
+}
+
+.modoClaro header{
+   background-color:#e0e0e0;
+   color: #424242;
+}
+
+.modoClaro header .botonesHeader div button{
+   background-color: #e0e0e0;
+   color: #424242;
+}
+.modoClaro header .botonesHeader div button:hover{
+   background-color: #bdbdbd;
+   color: #424242;
+}
+
+.modoClaro .menuImagen, .modoClaro .cajaFiltros{
+   background-color: #fafafa;
+}
+
+.modoClaro .cajaFiltros input, .modoClaro .url input, .modoClaro .cajaColorImagen span, .modoClaro .cajaColorImagen .btnColor{
+   background-color: #e0e0e0;
+}
+
+.modoClaro .cajaColorImagen select, .modoClaro .cajaColorImagen{
+   color: rgb(33 33 33 / 70%);
+}
+
+.modoClaro .cajaColorImagen select option{
+   background-color: #e0e0e0;
+   color: rgb(33 33 33 / 70%);
+}
+
+.modoClaro h2{
+   color: rgb(33 33 33 / 80%);
+}
+
+.modoClaro .url, .modoClaro h3{
+   color: rgb(33 33 33 / 70%);
+}
+
+.modoClaro .reestablecerFiltros{
+   background-color: #e0e0e0;
+   color: #424242;
+}
+
+.modoClaro .reestablecerFiltros:hover{
+   background-color: #bdbdbd;
+}
+
+.modoClaro label{
+   color: #424242;
+}
+
+.modoClaro .cajaColorImagen .btnColor span{
+   padding: 10px;
+}
+
+.modoClaro .menuTexto{
+   background-color: rgb(250, 250, 250)
+}
+.modoClaro .menuTexto input, .modoClaro .menuTexto textarea,.modoClaro #fuenteDeTextos,.modoClaro .menuTexto select option, .modoClaro .colocarAlLado, .modoClaro #interlineado, .modoClaro #espaciado, .modoClaro .tamanioYAlineacion button{
+   background-color: #e0e0e0;
+   color: #424242;
+}
+.modoClaro .estilosCheck{
+   color: #424242;
+}
+
+textarea, .contorno{
+   width: 100%;
+}
+
+.contorno input{
+   width: 32%;
+}
+
+.menuTexto .colocarAlLado{
+   margin-left: 0px;
+}
+
+.meme{
+   background-color: black;
+}
+
+
+/*Menú imagen*/
+
+.menuImagen, .cajaFiltros{
+   display: flex;
+   flex-direction: column;
+   background-color: #252935;
+   color: #e0e0e0;
+   padding-top: 20px;
+}
+
+.menuImagen{
+   width: 250px;
+   padding: 12px;
+   height: 132vh;
+}
+
+.menuImagen h2{
+   text-align: center;
+}
+
+
+
+.colocarAlLado{
+   display: flex;
+}
+
+.url{
+   display: flex;
+   flex-direction: column;
+   font-weight: 800;
+}
+
+.url label{
+   padding-bottom: 5px;
+}
+
+.url input{
+   background-color:  #393e49;
+   border: none;
+   padding: 7px;
+   border-radius: 5%;
+}
+
+.reestablecerFiltros{
+   margin-top: 40px;
+   background-color:  #393e49;
+   color: #e0e0e0;
+   padding: 9px 5px;
+   width: 70%;
+   border:none;
+}
+
+
+.colorDeImagen{
+   margin-top: 20px;
+}
+
+.menuImagen h3{
+   font-size: 16px;
+   font-weight: 800;
+}
+
+/* .colorDeImagen h3{
+   text-align: left;
+   font-size: 14px;
+} */
+
+.cajaColorImagen{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #e0e0e0;
+}
+
+
+
+.cajaColorImagen .btnColor{
+   background-color: #393e49;
+   display: flex;
+   align-items: center;
+   margin-right: 10px;
+   height: 35px;
+   border-radius: 5%;
+   width: 50%;
+}
+
+
+.cajaColorImagen .btnColor input{
+   border: none;
+   background-color: transparent;
+}
+
+.cajaColorImagen span{
+   font-size: 14px;
+   padding:10px
+}
+
+.cajaColorImagen select{
+   background-color: transparent;
+   color: #e0e0e0;
+   height: 35px;
+   border-radius: 5%;
+   padding: 5px 15px;
+   width: 50%;
+}
+
+.cajaColorImagen select option{
+   background-color: #393e49;
+   margin-top: 15px;
+}
+
+input[type = "range"]{
+
+   appearance: none;
+   /* background-color: #393e49; */
+   border: none;
+   width: 100%;
+   background-color: #5a5d68;
+   border-radius: 10px;
+   height: 6px;
+   margin-top: 10px;
+   color: #e0e0e0;
+}
+
+.cajaFiltros label{
+   margin-top: 10px;
+}
+
+
+/*Seccion meme*/
+
+.seccionMeme{
+   background-color: #30343f;
+   height: 110.6vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.colocarEnColumna{
+   display: flex;
+   flex-direction: column;
+}
+
+/*Estilos caja meme*/ 
+.meme{
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 700px;
+   height: 600px; 
+   border: 1px solid black;
+}
+
+.topText, .bottomText, .backgroundTexto{
+   /* background-color: white; */
+   width: 100%;
+   text-align: center;
+}
+
+
+
+.topText, .bottomText{
+   /* padding: 10px 0px; */
+   font-size: 40px;
+   padding: 20px;
+   width: 95%;
+   background-color: white;
+   margin: 0;
+   font-weight: 800;
+}
+
+.imagen{
+   background-color: black;
+   width: 100%;
+   height: 80%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: black;
+}
+
+/* .menuImagen{
+   display: none;
+} */
+
+
+
+/*Con fondo TRANSPARENTE*/
+
+.meme{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   border: none;
+}
+
+.conTextoTransparente .imagen{
+   height: 600px;
+   position: absolute; 
+   width: 700px;
+   z-index: 1;
+}
+
+.conTextoTransparente  .topText{
+   color: red;
+   /* position: relative; */
+   /* top: 0%; */
+   background-color: transparent;
+   z-index: 2;
+}
+
+.conTextoTransparente .bottomText{
+   color: red;
+   /* position: absolute; */
+   /* top: 105%; */
+   background-color: transparent;
+   z-index: 2;
+   /* width: 660px; */
+}
+
+/*Estilos menu texto*/
+.menuTexto{
+   background-color: #252935;
+   color:#e0e0e0;
+   padding: 20px;
+   width: 250px;
+   padding: 12px;
+   height: 132vh;
+}
+
+.menuTexto textarea{
+   background-color: #393e49;
+   color: #ffffff;
+   padding: 5px 10px;
+   border: none;
+}
+
+.menuTexto h2{
+   text-align: center;
+}
+
+.menuTexto h3{
+   font-size: 15px;
+}
+
+
+.estilosCheck{
+   display: flex;
+   font-size: 11px;
+}
+
+#fuenteDeTextos{
+   width: 100%;
+   padding: 5px 10px;
+   background-color: #393e49;
+   color: #ffffff;
+   border: none;
+}
+
+.tamanioYAlineacion{
+   display: flex;
+   margin-top: 5px;
+}
+
+.tamanioYAlineacion .tamanioLetra{
+   width: 80px;
+   background-color: #393e49;
+   color: #ffffff;
+   padding-left: 10px;
+   border: none;
+}
+
+.tamanioYAlineacion button{
+   background-color: #252935;
+    color: #ffffff;
+    border: none;
+    margin-left: 15px;
+}
+
+.colorYFondo{
+   display: flex;
+}
+
+.colocarAlLadoBody{
+   display: flex;
+}
+
+.colorYFondo .colocarAlLado{
+   display: flex;
+   align-items: center;
+   /* padding-left: 10px; */
+}
+
+#colorDeTexto, #fondoDeTexto{
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background-color: transparent;
+   width: 35px;
+   height: 35px;
+   border: none;
+   cursor: pointer;
+}
+
+.colorYFondoDeLetra, .cajaContorno, .cajaEspaciado, .cajaInterlineado{
+   margin-top: 30px;
+}
+
+.cajaFuente, .cajaInferior{
+   margin-top: 20px;
+}
+
+.colocarAlLado{
+   width: 95%;
+}
+
+.fondoTexto{
+   padding-left: 10px;
+}
+
+#colorDeTexto::-webkit-color-swatch, #fondoDeTexto::-webkit-color-swatch{
+   border-radius: 50%;
+}
+
+.contorno input{
+   border: none;
+   background-color: #393e49;
+   color: #ffffff;
+   padding: 10px 10px;
+}
+
+#espaciado, #interlineado{
+   background-color: #393e49;
+   color: #ffffff;
+   width: 100%;
+   padding: 5px 10px;
+   border: none;
+}
+
+.colocarAlLado{
+   background-color: #393e49;
+   margin-left: 10px;
+   padding: 5px 5px;
+   /* border-radius: 5%; */
+}
+
+
+.descargarMeme{
+   margin-top: 30px;
+   padding: 15px 20px;
+   background-color:  #2e7d32;
+   border: none;
+   color: white;
+   border-radius: 5px;
+   margin-bottom: 20px;
+}
+
+.descargarMeme i{
+   padding-right: 10px;
+}
+
+.descargarMeme:hover{
+   background-color: #1b5e20;
+}
+
+
+/*Ocultar*/
+.ocultarMenu{
+   display: none;
+}
+
+.meme{
+   width: 600px;
+   background-color: white;
+}
+
+.meme p{
+   padding: 0;
+   margin: 0;
+   width: 85%;
+   padding: 20px 10px;
+}
+
+.imagen{
+   background-color: black;
+   background-size: 100% 100%;
+   padding: 0;
+   margin: 0;
+   /* height: 200px; */
+}
+
+.cajaIconoCerrar{
+   display: none;
+}
+
+.cajaInterlineado{
+   margin-bottom: 40px;
+}
+
+.menuTexto, .menuImagen{
+   height: 135vh;
+}
+
+
+
+.seccionMeme{
+   height: 113.6vh;
+}
+
+.imagen{
+   background-color: black;
+}
+
+/*Mediaqueries*/
+
+@media (max-width:1200px){
+   body, .colocarEnColumna, header, .seccionMeme{
+      width: 100%;
+   }
+
+   .meme{
+      width: 80vw;
+      height: 500px;
+   }
+
+   .meme p{
+      padding: 10px 20px;
+      font-size: 28px;
+      font-weight: 800;
+   }
+
+
+   /*Menus*/
+    
+   .menuImagen, .menuTexto{
+      display: none;
+   }
+
+
+   /*Agrego y saco mediante js estas clases*/
+   .aparecerMenu{
+      display: block;
+      width: 100vw;
+   }
+
+   .ocultarEnMobile{
+      display: none;
+   }
+
+   #cerrarMenuTexto{
+      display: block;
+      font-size: 21px;
+      margin-right: 15px;
+      cursor: pointer;
+      width: 20px;
+      padding: 5px 5px;
+      text-align: center;
+      border-radius: 5px;
+   }
+   
+   #cerrarMenuTexto:hover{
+      background-color: #4e5565;
+   }
+
+   .cajaIconoCerrar{
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   .menuTexto{
+      height: 150vh;
+      /* display: flex;
+      flex-direction: column; */
+   }
+
+   .cerrar{
+      border: none;
+      background-color: transparent;
+      color: white;
+      width: 30px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+   }
+
+   .cerrar:hover{
+      background-color: #4e5565;
+   }
+   /* .cajaIconoCerrar{
+      display: flex;
+      background-color: red;
+      justify-content: flex-end;
+   } */
+
+   .modoClaro .cerrar{
+      color: #191e2b;
+   }
+   .modoClaro .cerrar:hover{
+      background-color: #bdbdbd;
+   }
+}

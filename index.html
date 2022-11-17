@@ -1,0 +1,212 @@
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Editor de memes</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+   <link rel="stylesheet" href="./css/estilos.css">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+   rel="stylesheet">
+   <!--Metas para SEO-->
+   <meta name="description" content="Proyecto editor de memes"/>
+   <meta name="author" content="Maria Cecilia Conti" />
+</head>
+<body class="modoOscuro">
+   <div class="colocarAlLadoBody">
+
+      <div class="colocarEnColumna">
+         <header>
+            <h1>Generador de Memes</h1>
+            <div class="botonesHeader">
+               <div>
+                  <button class="botonMenuImagen">
+                     <i class="fas fa-file-image button-icon-text"aria-hidden="true" aria-label="Icono menú imagen"></i>Imagen
+                  </button>
+               </div>
+               <div>
+               <button class="botonMenuTexto">
+                  <i class="fas fa-font button-icon-text"aria-hidden="true" aria-label="Icono menú texto"></i>Texto
+               </button>
+               </div>
+               <div>
+                  <button class="btnModoOscuro" aria-label="Cambiar a modo oscuro">
+                     <i class="far fa-lightbulb button-icon-text" aria-hidden="true" aria-label="Icono modo oscur"></i>Modo oscuro
+                  </button>
+                  <button class="btnModoClaro ocultarBoton" aria-label="Cambiar a modo claro">
+                     <i class="fas fa-lightbulb button-icon-text" aria-hidden="true" aria-label="Icono modo claro"></i>Modo claro
+                  </button>
+               </div>
+            </div>
+         </header>
+         <section class="seccionMeme">
+            <div class="meme" id="meme">
+               <p class="topText superior">TOP TEXT</p>
+               <div class="imagen" aria-label="Imagen del meme"></div>
+               <p class="bottomText inferior">BOTTOM TEXT</p>
+            </div>
+            <button class="descargarMeme">
+               <i class="fas fa-download button-icon-text" aria-hidden="true" aria-label="Icono descargar meme"></i>Descargar meme
+            </button>
+         </section>
+      </div>
+   
+
+      <section class="menuImagen">
+         <div class="cajaIconoCerrar">
+            <button class="cerrar cerrarMenuImagen">
+                <i class="fas fa-times" aria-hidden="true" id="cerrarMenuImagen"></i>
+            </button>
+         </div>
+         <h2>Imagen</h2>
+         <div class="url">
+            <label for="url">URL</label>
+            <input type="text" class="agregarUrl">
+         </div>
+         <div class="colorDeImagen">
+            <h3>Fondo</h3>
+            <div class="cajaColorImagen">
+               <div class="btnColor">
+                  <span>#FFFFFF</span>
+                  <input type="color" class="colorElegido" value="#FFFFFF">
+               </div>
+               <select class="seleccionarColor" aria-label="Seleccionar color">
+                  <option value="unset">Ninguno</option>
+                  <option value="lighten">Aclarar</option>
+                  <option value="darken">Oscurecer</option>
+                  <option value="difference">Diferenciar</option>
+                  <option value="luminosity">Luminosidad</option>
+                  <option value="multiply">Multiplicar</option>
+               </select>
+            </div>
+         </div>
+         <div class="cajaFiltros" aria-label="Seleccionar filtros para la imagen">
+            <h3>Filtros</h3>
+            <label for="brillo">Brillo</label>
+            <input type="range" class="brillo" min="0" max="1" step="0.1" value="1">
+            <label for="opacidad">opacidad</label>
+            <input type="range" class="opacidad" min="0" max="1" value="1" step="0.1">
+            <label for="contraste">Contraste</label>
+            <input type="range" class="contraste" min="100" max="1000" value="100">
+            <label for="desenfoque">Desenfoque</label>
+            <input type="range" class="desenfoque" min="0" max="10" value="0" step="0.1">
+            <label for="desenfoque">Escala de grises</label>
+            <input type="range" class="escalaDeGrises" min="0" max="100" value="0">
+            <label for="desenfoque">Sepia</label>
+            <input type="range" class="sepia" min="0" max="100" value="0">
+            <label for="desenfoque">Hue</label>
+            <input type="range" class="hue"  min="0" max="360" value="0">
+            <label for="desenfoque">Saturado</label>
+            <input type="range" class="saturado" min="100" max="1000" value="100" step="10">
+            <label for="negativo">Negativo</label>
+            <input type="range" class="negativo" min="0" max="1" value="0" step="0.1">
+         </div>
+
+         <button class="reestablecerFiltros">Reestablecer filtros</button>
+      </section>
+
+      <section class="menuTexto ocultarMenu">
+         <div class="cajaIconoCerrar">
+            <button class="cerrarMenuTexto cerrar">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+         </div>
+
+         <div>
+            <h2>Texto</h2>
+            <h3>Superior</h3>
+            <textarea  id="modificarTextoSuperior">TOP TEXT</textarea>
+            <div class="estilosCheck">
+               <input type="checkbox" id="sinTextoSuperior">
+               <p>Sin texto superior</p>
+            </div>
+         </div>
+         <div class="cajaInferior">
+            <h3>Inferior</h3>
+            <textarea  id="modificarTextoInferior">BOTTOM TEXT</textarea>
+            <div class="estilosCheck">
+               <input type="checkbox" id="sinTextoInferior">
+               <p>Sin texto Inferior</p>
+            </div>
+         </div>
+
+         <div class="cajaFuente">
+            <h3>Fuente</h3>
+            <select id="fuenteDeTextos" aria-label="Seleccionar fuente de texto">
+               <option value="Arial">Arial</option>
+               <option value="Arial Black">Arial Black</option>
+               <option value="American Typewriter">American typewriter</option>
+               <option value="Andale Mono">Andale mono</option>
+               <option value="Comic Sans MS">Comic Sans MS</option>
+               <option value="Helvetica">Helvetica</option>
+               <option value="Impact">Impact</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Times New Roman">Times New Roman</option>
+            </select>
+         </div>
+         <div class="tamanioYAlineacion">
+            <input type="number" value="40"  class="tamanioLetra">
+            <button id="textoEnIzquierda">
+               <i class="fas fa-align-left" aria-hidden="true"></i>
+            </button>
+            <button id="textoEnElCentro">
+               <i class="fas fa-align-center" aria-hidden="true"></i>
+            </button>
+            <button id="textoEnLaDerecha">
+               <i class="fas fa-align-right" aria-hidden="true"></i>
+            </button>
+         </div>
+         <div class="colorYFondoDeLetra">
+            <div class="colorYFondo">
+               <div>
+                  <h3>Color</h3>
+                  <div class="colocarAlLado">
+                     <input type="color" id="colorDeTexto">
+                     <span>#000000</span>
+                  </div>
+               </div>
+               <div class="fondoTexto">
+                  <h3>Fondo</h3>
+                  <div class="colocarAlLado segundo">
+                     <input type="color" value="#FFFFFF" id="fondoDeTexto">
+                     <span>#FFFFFF</span>
+                  </div>
+               </div>
+            </div>  
+            <div class="estilosCheck">
+               <input type="checkbox" class="fondoTransparente">
+               <p>Fondo transparente</p>
+            </div>
+         </div>
+         <div class="cajaContorno">
+            <h3>Contorno</h3>
+            <div class="contorno">
+               <input type="button" value="Ninguno" id="sinContorno">
+               <input type="button" value="Claro" id="contornoClaro">
+               <input type="button" value="Oscuro" id="contornoOscuro">
+            </div>
+         </div>
+         <div class="cajaEspaciado">
+            <h3>Espaciado</h3>
+            <input type="number" value="20" id="espaciado">
+         </div>
+
+         <div class="cajaInterlineado"> 
+            <h3>Interlineado</h3>
+            <select id="interlineado" aria-label="Seleccionar interlineado del texto">
+               <option value="0.8">0.8</option>
+               <option value="1">1</option>
+               <option value="1.2">1.2</option>
+               <option value="1.5">1.5</option>
+               <option value="2">2</option>
+               <option value="2.5"></option>
+            </select>
+         </div>
+      </section>
+   </div>
+
+   <script src="./js/main.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+</body>
+</html>
