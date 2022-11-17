@@ -236,6 +236,17 @@ textarea, .contorno{
    padding:10px
 }
 
+.modoClaro .cajaColorImagen .btnColor span{
+   margin-bottom: 7px;
+}
+
+.modoClaro .cajaColorImagen span{
+   height: 8px;
+}
+
+
+
+
 .cajaColorImagen select{
    background-color: transparent;
    color: #e0e0e0;
