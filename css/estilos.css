@@ -554,6 +554,14 @@ input[type = "range"]{
    background-color: black;
 }
 
+.contorno input:hover{
+   background-color:  #4e5565;
+}
+
+.modoClaro .contorno input:hover{
+   background-color:  #bdbdbd;
+}
+
 /*Mediaqueries*/
 
 @media (max-width:1200px){
