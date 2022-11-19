@@ -585,7 +585,13 @@ input[type = "range"]{
    background-color: #bdbdbd;
 }
 
+.menuTexto, .menuImagen{
+   height: 140vh;
+}
 
+.seccionMeme{
+   height: 118.9vh;
+}
 
 /*Mediaqueries*/
 
@@ -684,4 +690,10 @@ input[type = "range"]{
    .menuImagen{
       height: 142vh;
    }
+
+   .ocultarMenu{
+      display: none;
+   }
+
+   
 }
